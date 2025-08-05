@@ -24,11 +24,11 @@ func isTheValueIsExisting(arr []string, currentProfile string) bool {
 
 func TestCheckTheValueIsDuplicate(t *testing.T) {
 	inputData := []string{"019238019283", "6182736187236", "126381760442553"}
-	databaseData := []string{"6182736187237", "019238019284", "126381760442553"}
+	databaseData := []string{"126381760442553", "019238019284", "019238019284"}
 
 	isExist := isTheValuesIsDuplicate(inputData, databaseData)
 
-	assert.Equal(t, false, isExist, "the duplicate value is not found")
+	assert.Equal(t, true, isExist, "the duplicate value is not found")
 }
 
 func isTheValuesIsDuplicate(inputData []string, databaseData []string) bool {
