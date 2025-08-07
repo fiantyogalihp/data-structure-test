@@ -7,15 +7,19 @@ import (
 )
 
 func TestCheckTheValueIsExistingWithNoForLoop(t *testing.T) {
-	arr := []string{"admin", "operator", "finance"}
+	mapHash := map[string]bool{
+		"admin":    true,
+		"operator": true,
+		"finance":  true,
+	}
 	currentProfile := "finance"
 
-	isExist := isTheValueIsExisting(arr, currentProfile)
+	isExist := isTheValueIsExisting(mapHash, currentProfile)
 
 	assert.Equal(t, true, isExist, "the finance's profile is not found")
 }
 
-func isTheValueIsExisting(arr []string, currentProfile string) bool {
+func isTheValueIsExisting(arr map[string]bool, currentProfile string) bool {
 	// code here
 	// do not use for loop
 
